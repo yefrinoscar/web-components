@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claro Button Examples</title>
+  <script type="module" src="/build/claro-web-components.esm.js"></script>
+  <script nomodule src="/build/claro-web-components.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #3c3c3c;
+    }
+    h2 {
+      color: #6c6c6c;
+      margin-top: 2rem;
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .button-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+    }
+    .dark-bg {
+      background-color: #333;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+    .button-sizes {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Botones</h1>
+  
+  <h2>Botones primarios</h2>
+  <p>En un portal web, los botones juegan un papel crucial al facilitar la interacción de los usuarios. Por este motivo, hemos implementado una estructura de 3 niveles jerárquicos para los botones, lo que nos permite resaltar la importancia de la información y garantizar su correcto uso en términos de dimensiones.</p>
+  
+  <div class="button-section">
+    <h3>Botón Primario</h3>
+    <div class="button-group">
+      <claro-button variant="primary" text="Btn Primario"></claro-button>
+      <claro-button variant="primary" text="Btn Primario" disabled></claro-button>
+    </div>
+    <div class="button-group">
+      <div>Normal</div>
+      <div>Hover</div>
+    </div>
+  </div>
+  
+  <div class="button-section">
+    <h3>Botón Secundario</h3>
+    <div class="button-group">
+      <claro-button variant="secondary" text="Btn Secundario"></claro-button>
+      <claro-button variant="secondary" text="Btn Secundario" disabled></claro-button>
+    </div>
+    <div class="button-group">
+      <div>Normal</div>
+      <div>Hover</div>
+    </div>
+  </div>
+  
+  <h2>Botones Terciarios</h2>
+  <div class="button-section">
+    <div class="button-group">
+      <claro-button variant="tertiary" text="Btn Terciario"></claro-button>
+      <claro-button variant="tertiary" text="Btn Terciario" disabled></claro-button>
+    </div>
+    <div class="button-group">
+      <div>Normal</div>
+      <div>Hover</div>
+    </div>
+  </div>
+  
+  <div class="button-section">
+    <div class="button-group">
+      <claro-button variant="normal" text="Btn Terciario"></claro-button>
+      <claro-button variant="normal" text="Btn Terciario" disabled></claro-button>
+    </div>
+    <div class="button-group">
+      <div>Normal</div>
+      <div>Hover</div>
+    </div>
+  </div>
+  
+  <h2>Botones con Icono</h2>
+  <p>Estos tipos de botones suelen utilizarse con iconografía adicional o de forma aislada.</p>
+  
+  <div class="button-section">
+    <div class="button-group">
+      <claro-button variant="primary" text="Acción Primaria" icon>
+        <svg slot="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+        </svg>
+      </claro-button>
+      <claro-button variant="primary" icon>
+        <svg slot="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" fill="currentColor"/>
+        </svg>
+      </claro-button>
+    </div>
+  </div>
+  
+  <h2>Tamaños predefinidos</h2>
+  <p>Los diversos tamaños predefinidos contribuyen a crear una apariencia uniforme en todo el portal, ayudando a conservar visual la organización.</p>
+  
+  <div class="button-section">
+    <div class="button-sizes">
+      <claro-button variant="primary" text="Btn Primario" size="xs"></claro-button>
+      <claro-button variant="primary" text="Btn Primario" size="sm"></claro-button>
+      <claro-button variant="primary" text="Btn Primario" size="md"></claro-button>
+      <claro-button variant="primary" text="Btn Primario" size="lg"></claro-button>
+      <claro-button variant="primary" text="Btn Primario" size="xl"></claro-button>
+    </div>
+    <div class="button-group">
+      <div>XS</div>
+      <div>SM</div>
+      <div>MD</div>
+      <div>LG</div>
+      <div>XL</div>
+    </div>
+  </div>
+  
+  <h2>Ejemplos de aplicación</h2>
+  <p>La adaptación de los botones a fondos claros y oscuros es esencial para lograr una óptima visibilidad y experiencia de usuario. Para lograr esto, hemos proporcionado ejemplos específicos de elementos Claro que podían surgir en el portal.</p>
+  
+  <h3>Botón sobre superficies oscuras</h3>
+  <div class="dark-bg">
+    <div class="button-group">
+      <claro-button variant="primary" text="View Solutions"></claro-button>
+      <claro-button variant="secondary" text="View Solutions"></claro-button>
+    </div>
+  </div>
+  
+  <h3>Botón sobre superficies claras</h3>
+  <div class="button-section">
+    <div class="button-group">
+      <claro-button variant="primary" text="View Solutions"></claro-button>
+      <claro-button variant="secondary" text="View Solutions"></claro-button>
+      <claro-button variant="normal" text="Btn Terciario"></claro-button>
+    </div>
+  </div>
+</body>
+</html>

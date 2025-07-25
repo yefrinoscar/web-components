@@ -1,0 +1,185 @@
+/* CSS Variables for Claro Design System */
+:root {
+  --texto-primario: #3c3c3c;
+  --texto-secundario: #6c6c6c;
+  --texto-terciario: #b9b9b9;
+  --texto-blanco: #ffffff;
+  --color-botones-rojo-600: #da291c;
+  --color-botones-rojo-700-hover: #c7251a;
+  --color-botones-gris-700: #3c3c3c;
+  --color-botones-gris-500-hover: #6c6c6c;
+  --color-botones-gris-200-deshabilitado: #dbdbdb;
+  --color-botones-amarillo-600: #ffc722;
+  --color-botones-amarillo-700-hover: #ffad17;
+  --color-textos-texto-primario: #3c3c3c;
+  --color-textos-texto-secundario: #6c6c6c;
+  --color-textos-texto-terciario: #b9b9b9;
+  --color-textos-texto-blanco: #ffffff;
+  --color-links-accionables-azul-500: #2fbcc4;
+  
+  /* Spacing */
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  
+  /* Typography */
+  --font-family-base: 'Segoe UI', system-ui, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+}
+
+
+:host {
+  display: inline-block;
+}
+
+.claro-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-medium);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  border: 1px solid transparent;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Primary Button */
+.claro-button--primary {
+  background-color: var(--color-botones-rojo-600);
+  color: var(--color-textos-texto-blanco);
+  border-color: var(--color-botones-rojo-600);
+}
+
+.claro-button--primary:hover {
+  background-color: var(--color-botones-rojo-700-hover);
+  border-color: var(--color-botones-rojo-700-hover);
+}
+
+/* Secondary Button */
+.claro-button--secondary {
+  background-color: transparent;
+  color: var(--color-botones-rojo-600);
+  border-color: var(--color-botones-rojo-600);
+}
+
+.claro-button--secondary:hover {
+  background-color: transparent;
+  color: var(--color-botones-rojo-700-hover);
+  border-color: var(--color-botones-rojo-700-hover);
+}
+
+/* Tertiary Button - Normal (Gray) */
+.claro-button--tertiary {
+  background-color: var(--color-botones-gris-700);
+  color: var(--color-textos-texto-blanco);
+  border-color: var(--color-botones-gris-700);
+}
+
+.claro-button--tertiary:hover {
+  background-color: var(--color-botones-gris-500-hover);
+  border-color: var(--color-botones-gris-500-hover);
+}
+
+/* Tertiary Button - Yellow variant */
+.claro-button--normal {
+  background-color: var(--color-botones-amarillo-600);
+  color: var(--color-textos-texto-primario);
+  border-color: var(--color-botones-amarillo-600);
+}
+
+.claro-button--normal:hover {
+  background-color: var(--color-botones-amarillo-700-hover);
+  border-color: var(--color-botones-amarillo-700-hover);
+}
+
+/* Disabled Button */
+.claro-button--disabled {
+  background-color: var(--color-botones-gris-200-deshabilitado);
+  color: var(--color-textos-texto-terciario);
+  border-color: var(--color-botones-gris-200-deshabilitado);
+  cursor: not-allowed;
+}
+
+/* Button Sizes */
+.claro-button--xs {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+}
+
+.claro-button--sm {
+  padding: var(--spacing-1) var(--spacing-3);
+  font-size: var(--font-size-sm);
+}
+
+.claro-button--md {
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-md);
+}
+
+.claro-button--lg {
+  padding: var(--spacing-3) var(--spacing-6);
+  font-size: var(--font-size-lg);
+}
+
+.claro-button--xl {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: var(--font-size-xl);
+}
+
+/* Icon Button */
+.claro-button--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.claro-button--icon .claro-button__text {
+  margin-right: var(--spacing-2);
+}
+
+/* Button with icon only */
+.claro-button--icon:not(:has(.claro-button__text)) {
+  padding: var(--spacing-2);
+  aspect-ratio: 1;
+}
+
+/* Focus state for accessibility */
+.claro-button:focus {
+  outline: 2px solid var(--color-links-accionables-azul-500);
+  outline-offset: 2px;
+}
+
+/* Button text */
+.claro-button__text {
+  display: inline-block;
+}
+
+
+.test {
+  font-size: 30px;
+}
